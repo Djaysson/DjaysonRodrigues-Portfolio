@@ -1,0 +1,15 @@
+const theme = {
+  colors: {
+    background: '#161C22',
+    backgroundLight: '#21272F',
+    primary: '#50BF97',
+    text: '#FFFFFF',
+    textHighlight: '#888888',
+    textLight: '#C4C4C4',
+    border: '#4BC096',
+    inputBackground: '#14171B',
+    error: '#d45d5d'
+  }
+};
+
+export default theme;
