@@ -4,9 +4,9 @@ import {
   FaLinkedin,
   FaInstagramSquare
 } from 'react-icons/fa';
-import { PageTitle } from '../PageTitle';
-import profileImg from '../../assets/images/picture.png';
-import illustrationImg from '../../assets/images/triangle.png';
+import { PageTitle } from '../../PageTitle';
+import profileImg from '../../../assets/images/picture.png';
+import illustrationImg from '../../../assets/images/triangle.png';
 import { Container } from './styles';
 
 export function AboutSection() {

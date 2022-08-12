@@ -1,6 +1,6 @@
-import { AboutSection } from '../components/AboutSection';
+import { AboutSection } from '../components/Sections/AboutSection';
 import { Header } from '../components/Header';
-import { StartingSection } from '../components/StartingSection';
+import { StartingSection } from '../components/Sections/StartingSection';
 import { HomeContainer } from '../styles/HomeStyles';
 
 export default function Home() {

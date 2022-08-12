@@ -1,5 +1,5 @@
 import { FiArrowDown } from 'react-icons/fi';
-import picture from '../../assets/images/macbook.png';
+import picture from '../../../assets/images/macbook.png';
 import { Container, Content, Citation, DownArrow } from './styles';
 
 export function StartingSection() {
