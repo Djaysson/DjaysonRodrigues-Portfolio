@@ -60,7 +60,7 @@ export default createGlobalStyle`
    
 
     @media(max-width:1450px){
-      max-width: 70rem;
+      max-width: 80rem;
     }
     @media(max-width:1080px){
       max-width: 50rem;
