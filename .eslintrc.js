@@ -31,6 +31,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/img-redundant-alt': 'off',
-    'react/require-default-props': 'off'
+    'react/require-default-props': 'off',
+    'arrow-body-style': 'off'
   }
 };

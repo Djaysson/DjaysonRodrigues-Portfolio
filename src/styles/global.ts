@@ -33,7 +33,7 @@ export default createGlobalStyle`
 
   body {
     color: ${props => props.theme.colors.text};
-    background: linear-gradient(to right,#161C22 30%, #21272F 30%);
+    background: linear-gradient(to right,#21272F 30%, #161C22 30%);
     
   }
 

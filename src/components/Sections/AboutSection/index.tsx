@@ -8,6 +8,7 @@ import { PageTitle } from '../../PageTitle';
 import profileImg from '../../../assets/images/picture.png';
 import illustrationImg from '../../../assets/images/triangle.png';
 import { Container } from './styles';
+import { HeroSkillSection } from '../HeroSkillSection';
 
 export function AboutSection() {
   return (
@@ -71,6 +72,7 @@ export function AboutSection() {
           </div>
         </div>
       </section>
+      <HeroSkillSection />
     </Container>
   );
 }
