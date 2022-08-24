@@ -1,0 +1,95 @@
+import { darken } from 'polished';
+import styled from 'styled-components';
+
+interface ProjectItemsProps {
+  imgUrl: string;
+}
+
+export const Container = styled.div<ProjectItemsProps>`
+  width: 100%;
+  display: flex;
+  height: 25rem;
+  align-items: flex-end;
+  position: relative;
+
+  &:hover {
+    > section {
+      > div.text {
+        right: -12rem;
+      }
+      > div.overlay {
+        opacity: 0.4;
+      }
+    }
+    > button a {
+      color: ${props => props.theme.colors.primary};
+    }
+  }
+  > button {
+    height: 4rem;
+    margin: 0 0 3rem 5rem;
+    background: none;
+    border: none;
+
+    a {
+      color: ${props => props.theme.colors.text};
+      font-size: 2rem;
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      transition: 0.5s;
+    }
+  }
+  > section {
+    width: 50rem;
+    height: 100%;
+    background: url(${props => props.imgUrl}) no-repeat center;
+    background-size: cover;
+    position: relative;
+
+    > div.overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: ${props => props.theme.colors.background};
+      opacity: 0.75;
+      transition: 0.5s;
+    }
+    > div.text {
+      position: absolute;
+      top: 3rem;
+      right: -10rem;
+      transition: 0.5s;
+      width: fit-content;
+      h1 {
+        color: ${props => props.theme.colors.primary};
+        font-size: 2.5rem;
+        text-shadow: -4px 5px 22px #11172b;
+      }
+      h2 {
+        color: ${props => darken(0.1, props.theme.colors.primary)};
+        font-size: 2rem;
+        font-weight: 300;
+        text-shadow: -4px 5px 22px #11172b;
+      }
+    }
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    > button {
+      margin: 3rem 5rem 0 0;
+    }
+    > section > div.text {
+      text-align: right;
+      right: 0;
+      left: -10rem;
+    }
+    &:hover {
+      > section > div.text {
+        left: -12rem;
+      }
+    }
+  }
+`;
