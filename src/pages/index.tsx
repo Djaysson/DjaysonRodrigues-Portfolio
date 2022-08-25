@@ -4,6 +4,7 @@ import { StartingSection } from '../components/Sections/StartingSection';
 import { ProjectsSection } from '../components/Sections/ProjectsSection';
 import { HomeContainer } from '../styles/HomeStyles';
 import { ContactSection } from '../components/Sections/ContactSection';
+import { Footer } from '../components/Footer';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <ProjectsSection />
         <ContactSection />
       </main>
+      <Footer />
     </HomeContainer>
   );
 }
