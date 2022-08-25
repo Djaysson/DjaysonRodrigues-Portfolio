@@ -7,6 +7,13 @@ export function Footer() {
   function handleRedirect(url: string) {
     window.open(url);
   }
+  function handleScrollTop() {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
   return (
     <Container>
       <div className="logoContainer">
@@ -14,7 +21,7 @@ export function Footer() {
         <div />
       </div>
       <div className="container">
-        <button type="button">
+        <button type="button" onClick={handleScrollTop}>
           <BsFillArrowUpCircleFill />
         </button>
         <section>
