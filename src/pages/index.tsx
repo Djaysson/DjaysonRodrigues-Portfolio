@@ -1,8 +1,9 @@
-import { AboutSection } from '../components/Sections/AboutSection';
 import { Header } from '../components/Header';
+import { AboutSection } from '../components/Sections/AboutSection';
 import { StartingSection } from '../components/Sections/StartingSection';
-import { HomeContainer } from '../styles/HomeStyles';
 import { ProjectsSection } from '../components/Sections/ProjectsSection';
+import { HomeContainer } from '../styles/HomeStyles';
+import { ContactSection } from '../components/Sections/ContactSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <StartingSection />
         <AboutSection />
         <ProjectsSection />
+        <ContactSection />
       </main>
     </HomeContainer>
   );

@@ -32,6 +32,7 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/img-redundant-alt': 'off',
     'react/require-default-props': 'off',
-    'arrow-body-style': 'off'
+    'arrow-body-style': 'off',
+    'jsx-a11y/label-has-associated-control': 'off'
   }
 };
