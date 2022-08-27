@@ -32,7 +32,7 @@ export function ProjectsSection() {
         />
       </section>
       <button type="button">
-        <Link href="/projetos">
+        <Link href="/projects">
           <a>Ver todos os projetos</a>
         </Link>
       </button>
