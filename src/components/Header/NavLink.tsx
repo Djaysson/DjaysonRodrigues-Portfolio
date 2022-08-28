@@ -8,15 +8,24 @@ interface NavProps {
   path: string;
   icon: string;
   iconDescription: string;
+  includes?: boolean;
 }
 export default function NavLink({
   title,
   path,
   icon,
-  iconDescription
+  iconDescription,
+  includes = false
 }: NavProps) {
   const router = useRouter();
-  const isActive = router.pathname === path;
+
+  function verificationIsActive() {
+    if (includes) {
+      return router.pathname.includes(path);
+    }
+    return path === router.pathname;
+  }
+  const isActive = verificationIsActive();
 
   return (
     <NavLinkContainer isActive={isActive}>

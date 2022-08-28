@@ -18,20 +18,21 @@ export function Header() {
         />
         <NavLink
           title="Sobre"
-          path="/sobre"
+          path="/about"
           icon={userIcon}
           iconDescription="Section navigation icon about"
         />
         <img src={logoIcon} alt="Djayson Rodrigues personal website logo" />
         <NavLink
           title="Portfolio"
-          path="/portfolio"
+          path="/projects"
           icon={bagIcon}
           iconDescription="Project section navigation icon"
+          includes
         />
         <NavLink
           title="Contato"
-          path="/contato"
+          path="/contact"
           icon={phoneIcon}
           iconDescription="Contact section navigation icon"
         />

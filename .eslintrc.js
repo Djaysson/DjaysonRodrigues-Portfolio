@@ -33,6 +33,7 @@ module.exports = {
     'jsx-a11y/img-redundant-alt': 'off',
     'react/require-default-props': 'off',
     'arrow-body-style': 'off',
-    'jsx-a11y/label-has-associated-control': 'off'
+    'jsx-a11y/label-has-associated-control': 'off',
+    'react/jsx-no-target-blank': 'off'
   }
 };
