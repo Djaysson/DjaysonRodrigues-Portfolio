@@ -21,10 +21,11 @@ export default function NavLink({
 
   function verificationIsActive() {
     if (includes) {
-      return router.pathname.includes(path);
+      return router.asPath.includes(path);
     }
-    return path === router.pathname;
+    return path === router.asPath;
   }
+
   const isActive = verificationIsActive();
 
   return (
