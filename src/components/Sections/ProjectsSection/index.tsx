@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 export function ProjectsSection() {
   return (
-    <Container>
+    <Container id="recentProjects">
       <PageTitle
         classN="pageTitle"
         title="Últimos Projetos"

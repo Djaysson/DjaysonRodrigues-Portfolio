@@ -30,7 +30,6 @@ export default function UniqueProject() {
       />
 
       <main>
-        {/* <h1>Descrição & detalhes</h1> */}
         <div>
           <div>
             <img
@@ -90,13 +89,13 @@ export default function UniqueProject() {
 
         <div>
           <button type="button">
-            <Link href="/projects">
-              <a>VER OUTROS PROJETOS</a>
+            <Link href="/#recentProjects">
+              <a>Ver projetos recentes </a>
             </Link>
           </button>
           <button type="button">
-            <Link href="/contact">
-              <a> ENTRE EM CONTO</a>
+            <Link href="/#contact">
+              <a>Entre em contato</a>
             </Link>
           </button>
         </div>

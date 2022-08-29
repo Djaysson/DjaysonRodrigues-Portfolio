@@ -12,7 +12,7 @@ import { HeroSkillSection } from '../HeroSkillSection';
 
 export function AboutSection() {
   return (
-    <Container>
+    <Container id="about">
       <PageTitle classN="pageTitle" title="Quem sou" description="sobre me" />
 
       <section>
