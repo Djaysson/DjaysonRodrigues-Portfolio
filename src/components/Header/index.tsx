@@ -18,7 +18,7 @@ export function Header() {
         />
         <NavLink
           title="Sobre"
-          path="/about"
+          path="/#about"
           icon={userIcon}
           iconDescription="Section navigation icon about"
         />
@@ -32,7 +32,7 @@ export function Header() {
         />
         <NavLink
           title="Contato"
-          path="/contact"
+          path="/#contact"
           icon={phoneIcon}
           iconDescription="Contact section navigation icon"
         />
