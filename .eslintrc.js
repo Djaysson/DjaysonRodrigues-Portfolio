@@ -35,6 +35,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'react/jsx-no-target-blank': 'off',
-    '@typescript-eslint/no-unused-vars': 'off'
+    '@typescript-eslint/no-unused-vars': 'off',
+    'react/self-closing-comp': 'off'
   }
 };

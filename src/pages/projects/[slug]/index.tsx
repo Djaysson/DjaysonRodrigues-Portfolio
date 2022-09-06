@@ -1,13 +1,41 @@
+import { useRouter } from 'next/router';
+import Prismic from '@prismicio/client';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { FaRegWindowClose } from 'react-icons/fa';
 import Link from 'next/link';
 import { Banner } from '../../../components/Banner';
-
 import { PageTitle } from '../../../components/PageTitle';
+import { Footer } from '../../../components/Footer';
+import { getPrismicClient } from '../../../services/prismic';
 
 import { Container } from '../../../styles/UniqueProjectStyles';
-import { Footer } from '../../../components/Footer';
+import { LoadingScreen } from '../../../components/LoadingScreen';
 
-export default function UniqueProject() {
+interface ProjectData {
+  slug: string;
+  title: string;
+  occupation: string;
+  tech: string;
+  hosting: string;
+  context: string;
+  category: string;
+  description: string;
+  demo: string;
+  github: string;
+  icon: string;
+  thumbnail: string;
+}
+
+interface ProjectProps {
+  project: ProjectData;
+}
+
+export default function UniqueProject({ project }: ProjectProps) {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <LoadingScreen />;
+  }
   return (
     <Container>
       <div className="title">
@@ -24,63 +52,46 @@ export default function UniqueProject() {
         </Link>
       </div>
       <Banner
-        title="Projeto 01"
-        type="Website"
-        imgUrl="https://miro.medium.com/max/1400/0*fH0mpJkOPO0HRy6N.jpg"
+        title={project.title}
+        type={project.category}
+        imgUrl={project.thumbnail}
       />
 
       <main>
         <div>
           <div>
-            <img
-              src="https://miro.medium.com/max/1400/0*fH0mpJkOPO0HRy6N.jpg"
-              alt=""
-            />
+            <img src={project.icon} alt={`${project.title} project image`} />
             <h2>
-              Projeto <span>Dshop-shoes</span>
+              Projeto <span>{project.title}</span>
             </h2>
           </div>
 
           <ul>
             <li>
-              - Função: <span>Desenvolvedor Frot-end</span>
+              - Função: <span>{project.occupation}</span>
             </li>
             <li>
-              - Tecnologias: <span>HTML-CSS -JS-REACTJS</span>
+              - Tecnologias: <span>{project.tech}</span>
             </li>
             <li>
-              - Hospedagem: <span>Vercel e MongoDB Atlas</span>
+              - Hospedagem: <span>{project.hosting}</span>
             </li>
             <li>
-              - Contexto:{' '}
-              <span>
-                {' '}
-                Teach Other é uma plataforma de agendamento de aula particular
-                para universitários, desenvolvida para a disciplina Projeto
-                Transversal da Universidade de Brasília (UnB).
-              </span>
+              - Contexto: <span>{project.context}</span>
             </li>
             <li>
-              - Descrição técnica:{' '}
-              <span>
-                No frontend, foi utilizado o NextJS com Typescript e Tailwind
-                CSS. Ele é estático e com a rota de perfil do professor sendo
-                renderizada no servidor. O backend é serverless através do
-                combo: API Routes + MongoDB Atlas. Cada rota é uma função
-                serverless independente, que só é ligada caso receba uma
-                requisição, e ela escala automaticamente.
-              </span>
+              - Descrição técnica: <span>{project.description}</span>
             </li>
 
             <li>
               - Ver projeto online:{' '}
-              <a href="https://github.com/Djaysson" target="_blank">
+              <a href={project.demo} target="_blank">
                 click aqui
               </a>
             </li>
             <li>
               -GitHub :{' '}
-              <a href="https://github.com/Djaysson" target="_blank">
+              <a href={project.github} target="_blank">
                 click aqui
               </a>
             </li>
@@ -105,3 +116,51 @@ export default function UniqueProject() {
     </Container>
   );
 }
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const prismic = getPrismicClient();
+
+  const project = await prismic.query([
+    Prismic.Predicates.at('document.type', 'projeto')
+  ]);
+
+  const paths = project.results.map(items => ({
+    params: {
+      slug: items.uid
+    }
+  }));
+
+  return {
+    paths,
+    fallback: true
+  };
+};
+
+export const getStaticProps: GetStaticProps = async context => {
+  const prismic = getPrismicClient();
+  const { slug } = context.params;
+
+  const response = await prismic.getByUID('projeto', String(slug), {});
+
+  const project = {
+    slug: response.uid,
+    title: response.data.title,
+    occupation: response.data.occupation,
+    tech: response.data.tech,
+    hosting: response.data.hosting,
+    context: response.data.context,
+    category: response.data.category,
+    description: response.data.description,
+    demo: response.data.demo.url,
+    github: response.data.github.url,
+    icon: response.data.icon.url,
+    thumbnail: response.data.thumbnail.url
+  };
+
+  return {
+    props: {
+      project
+    },
+    revalidate: 86400
+  };
+};
