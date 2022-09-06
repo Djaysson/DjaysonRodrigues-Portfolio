@@ -1,12 +1,6 @@
-import { ReactNode } from 'react';
+import { PageTitleProps } from '../../types/types';
 
 import { Container } from './styles';
-
-interface PageTitleProps {
-  title: string | ReactNode;
-  description?: string | ReactNode;
-  classN?: string;
-}
 
 export function PageTitle({ title, description, classN }: PageTitleProps) {
   return (

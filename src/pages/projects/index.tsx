@@ -5,26 +5,8 @@ import { Footer } from '../../components/Footer';
 import { Header } from '../../components/Header';
 import { PageTitle } from '../../components/PageTitle';
 import { getPrismicClient } from '../../services/prismic';
+import { ProjectsProps } from '../../types/types';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
-
-interface ProjectData {
-  slug: string;
-  title: string;
-  occupation: string;
-  tech: string;
-  hosting: string;
-  context: string;
-  category: string;
-  description: string;
-  demo: string;
-  github: string;
-  icon: string;
-  thumbnail: string;
-}
-
-interface ProjectsProps {
-  projects: ProjectData[];
-}
 
 export default function Projects({ projects }: ProjectsProps) {
   return (

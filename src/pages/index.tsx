@@ -7,27 +7,8 @@ import { ProjectsSection } from '../components/Sections/ProjectsSection';
 import { ContactSection } from '../components/Sections/ContactSection';
 import { Footer } from '../components/Footer';
 import { getPrismicClient } from '../services/prismic';
-
+import { HomeProps } from '../types/types';
 import { HomeContainer } from '../styles/HomeStyles';
-
-interface ProjectData {
-  slug: string;
-  title: string;
-  occupation: string;
-  tech: string;
-  hosting: string;
-  context: string;
-  category: string;
-  description: string;
-  demo: string;
-  github: string;
-  icon: string;
-  thumbnail: string;
-}
-
-interface HomeProps {
-  projects: ProjectData[];
-}
 
 export default function Home({ projects }: HomeProps) {
   return (

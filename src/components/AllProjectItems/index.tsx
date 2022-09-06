@@ -1,12 +1,6 @@
 import Link from 'next/link';
+import { AllProjectItemsProps } from '../../types/types';
 import { Container } from './styles';
-
-interface AllProjectItemsProps {
-  title: string;
-  type: string;
-  slug: string;
-  imgUrl: string;
-}
 
 export function AllProjectItems({
   title,

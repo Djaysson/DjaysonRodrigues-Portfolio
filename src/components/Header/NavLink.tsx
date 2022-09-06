@@ -1,15 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { NavProps } from '../../types/types';
 
 import { NavLinkContainer } from './styles';
 
-interface NavProps {
-  title: string;
-  path: string;
-  icon: string;
-  iconDescription: string;
-  includes?: boolean;
-}
 export default function NavLink({
   title,
   path,

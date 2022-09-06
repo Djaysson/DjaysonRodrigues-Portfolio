@@ -2,14 +2,9 @@ import Link from 'next/link';
 import { AiOutlineRightCircle } from 'react-icons/ai';
 import { Container } from './styles';
 
-interface ProjectProps {
-  title: string;
-  type: string;
-  slug: string;
-  img: string;
-}
+import { ProjectItemsProps } from '../../types/types';
 
-export function ProjectItems({ title, type, slug, img }: ProjectProps) {
+export function ProjectItems({ title, type, slug, img }: ProjectItemsProps) {
   return (
     <Container imgUrl={img}>
       <section>
@@ -20,7 +15,7 @@ export function ProjectItems({ title, type, slug, img }: ProjectProps) {
         </div>
       </section>
       <button type="button">
-        <Link href={`/projetos/${slug}`}>
+        <Link href={`/projects/${slug}`}>
           <a>
             Ver mais <AiOutlineRightCircle />
           </a>

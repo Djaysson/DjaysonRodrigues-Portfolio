@@ -7,28 +7,9 @@ import { Banner } from '../../../components/Banner';
 import { PageTitle } from '../../../components/PageTitle';
 import { Footer } from '../../../components/Footer';
 import { getPrismicClient } from '../../../services/prismic';
-
+import { ProjectProps } from '../../../types/types';
 import { Container } from '../../../styles/UniqueProjectStyles';
 import { LoadingScreen } from '../../../components/LoadingScreen';
-
-interface ProjectData {
-  slug: string;
-  title: string;
-  occupation: string;
-  tech: string;
-  hosting: string;
-  context: string;
-  category: string;
-  description: string;
-  demo: string;
-  github: string;
-  icon: string;
-  thumbnail: string;
-}
-
-interface ProjectProps {
-  project: ProjectData;
-}
 
 export default function UniqueProject({ project }: ProjectProps) {
   const router = useRouter();

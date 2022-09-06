@@ -1,18 +1,8 @@
 import Link from 'next/link';
 import { PageTitle } from '../../PageTitle';
 import { ProjectItems } from '../../ProjectItems';
+import { ProjectsProps } from '../../../types/types';
 import { Container } from './styles';
-
-interface ProjectData {
-  slug: string;
-  title: string;
-  category: string;
-  thumbnail: string;
-}
-
-interface ProjectsProps {
-  projects: ProjectData[];
-}
 
 export function ProjectsSection({ projects }: ProjectsProps) {
   return (
