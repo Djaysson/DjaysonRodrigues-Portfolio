@@ -1,4 +1,4 @@
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
 import styled from 'styled-components';
 
 interface NavLinkProps {
@@ -11,16 +11,74 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   height: 8rem;
-  /* border-bottom: 1px solid ${props => props.theme.colors.primary}; */
 
-  ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 5rem;
+  background: ${props => props.theme.colors.background};
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 5rem;
 
-    img:nth-child(3) {
-      width: 10rem;
+      > img {
+        width: 10rem;
+      }
+    }
+  }
+
+  @media (max-width: 1450px) {
+    nav {
+      ul {
+        gap: 7rem;
+
+        > img {
+          width: 10.5rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    nav {
+      ul {
+        gap: 4rem;
+
+        > img {
+          width: 9.5rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    height: 5rem;
+    nav {
+      width: 50vw;
+      height: 70vh;
+      margin-top: 5rem;
+      position: absolute;
+      border-radius: 0 0 30% 0;
+      border-right: 1px solid ${props => props.theme.colors.primary};
+      border-bottom: 1px solid ${props => props.theme.colors.primary};
+      transform: translateX(-999px);
+
+      top: 0;
+      left: 0;
+      background: ${props => props.theme.colors.background};
+      transition: all 0.5s;
+      z-index: 3;
+      &.open {
+        transform: translateX(-10px);
+      }
+      ul {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        margin-top: 1rem;
+        > img {
+          display: none;
+        }
+      }
     }
   }
 `;
@@ -32,6 +90,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     justify-content: center;
     text-transform: uppercase;
 
+    padding: 10px;
     color: ${props =>
       props.isActive
         ? props.theme.colors.primary
@@ -45,8 +104,9 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
           : lighten(0.2, props.theme.colors.textHighlight)};
     }
     img {
+      width: 2rem;
       height: 2rem;
-      padding-bottom: 0.1rem;
+      padding-bottom: 0.12rem;
     }
     span {
       position: relative;
@@ -68,6 +128,37 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
       span:after {
         transform: scaleX(1);
         opacity: 1;
+      }
+    }
+  }
+`;
+
+export const MobileNavBar = styled.div`
+  display: none;
+  width: 100%;
+  height: 100%;
+  @media (max-width: 700px) {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(3.5vw + 5px);
+
+    > button {
+      border: none;
+      background: none;
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+        color: ${props => props.theme.colors.primary};
+      }
+    }
+
+    a {
+      img {
+        width: 8rem;
       }
     }
   }

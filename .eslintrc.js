@@ -36,6 +36,8 @@ module.exports = {
     'jsx-a11y/label-has-associated-control': 'off',
     'react/jsx-no-target-blank': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
-    'react/self-closing-comp': 'off'
+    'react/self-closing-comp': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off'
   }
 };

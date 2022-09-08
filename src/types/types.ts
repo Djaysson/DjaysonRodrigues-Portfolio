@@ -45,8 +45,8 @@ export type BannerProps = {
 export type NavProps = {
   title: string;
   path: string;
-  icon: string;
-  iconDescription: string;
+  icon?: string;
+  iconDescription?: string;
   includes?: boolean;
 };
 
