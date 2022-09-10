@@ -56,17 +56,18 @@ export default createGlobalStyle`
     width: 100%;
     margin:  0 auto;
     max-width: 85rem;
-    padding: 0 calc(3.5vw + 5px);
+    padding: 0 calc(3vw + 5px);
    
 
     @media(max-width:1450px){
       max-width: 80rem;
     }
     @media(max-width:1080px){
-      max-width: 50rem;
+      max-width: 60rem;
     }
     @media(max-width:700px){
-      padding: 0 calc(3.5vw + 5px);
+      padding: 0 calc(3vw + 3px);
     }
+    
   }
 `;
