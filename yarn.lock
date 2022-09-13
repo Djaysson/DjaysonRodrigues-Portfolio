@@ -3274,6 +3274,11 @@ react-refresh@0.8.3:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-typing-hook@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/react-typing-hook/-/react-typing-hook-1.0.10.tgz#22eeb562cda8d22e446bfb2edbe531a3cd881d82"
+  integrity sha512-/TUnjGVscMKnXaJQNLRNHRP0G4xnAy5XFsuCEAa9J/Jo4bOR0jthXepi/MwqwykOQHD1CBMDSJ5GQ3xLOMEraw==
+
 react@17.0.2:
   version "17.0.2"
   resolved "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
