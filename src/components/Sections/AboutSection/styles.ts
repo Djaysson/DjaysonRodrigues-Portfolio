@@ -3,43 +3,24 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  /* border: 1px solid ${props => props.theme.colors.primary}; */
+
   > section {
     width: 100%;
-    margin-top: 4rem;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    gap: 1rem;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-items: center;
+    gap: 3rem;
 
-    div:nth-child(1) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      img:first-child {
-        max-height: 40rem;
-        max-width: 30rem;
-        z-index: 1;
-        position: relative;
-      }
-      img:last-child {
-        max-height: 40rem;
-        max-width: 28rem;
-        position: absolute;
-        top: 5px;
-        right: 2px;
-        z-index: -1;
-      }
-    }
-    div:nth-child(2) {
+    div:first-child {
+      margin-top: -100px;
       height: 400px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 500;
         span {
           padding: 2px;
@@ -53,24 +34,24 @@ export const Container = styled.div`
         margin: 10px 0;
         color: ${props => darken(0.1, props.theme.colors.textLight)};
       }
-      div:nth-child(5) {
+      div.moreInfo {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin: 10px 0;
+        margin: 30px 0;
         color: ${props => darken(0.1, props.theme.colors.textLight)};
-        span:first-child {
+
+        span {
           font-size: 1rem;
           font-weight: 400;
-        }
-        span:last-child {
-          font-size: 1rem;
-          font-weight: 400;
-          margin-right: 15px;
+
+          & + span {
+            margin-right: 15px;
+          }
         }
       }
-      div:nth-child(6) {
+      div.moreContactInfo {
         width: 85%;
         height: 100px;
         display: flex;
@@ -95,6 +76,10 @@ export const Container = styled.div`
           transition: all 0.2s;
           &:hover {
             background: ${props => darken(0.1, props.theme.colors.primary)};
+          }
+          svg {
+            width: 1rem;
+            height: 1rem;
           }
         }
         > div {
@@ -127,7 +112,8 @@ export const Container = styled.div`
               margin-left: 0.5rem;
             }
             svg {
-              font-size: 2rem;
+              width: 2rem;
+              height: 2rem;
               color: ${props => props.theme.colors.primary};
               transition: all 0.2s;
               &:hover {
@@ -135,6 +121,337 @@ export const Container = styled.div`
               }
             }
           }
+        }
+      }
+    }
+    div:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      img:nth-child(1) {
+        max-height: 40rem;
+        max-width: 30rem;
+        z-index: 1;
+        position: relative;
+      }
+      img:nth-child(2) {
+        max-height: 40rem;
+        max-width: 28rem;
+        position: absolute;
+        top: 5px;
+        right: 2px;
+        z-index: -1;
+      }
+    }
+  }
+
+  @media (max-width: 1450px) {
+    > section {
+      div:first-child {
+        div.moreInfo {
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    > section {
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+      div:first-child {
+        margin-top: -60px;
+        h1 {
+          font-size: 1.8rem;
+          span {
+          }
+        }
+        p {
+          margin: 5px 0;
+        }
+
+        div.moreInfo {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          margin: 15px 0;
+
+          span {
+            & + span {
+              margin-right: 0;
+            }
+          }
+        }
+        div.moreContactInfo {
+          width: 100%;
+          flex-direction: row;
+          > button {
+            width: 30%;
+            height: 40px;
+          }
+          > div {
+            margin-right: 80px;
+
+            > a {
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                color: ${props => props.theme.colors.primary};
+                transition: all 0.2s;
+                &:hover {
+                  color: ${props => darken(0.1, props.theme.colors.primary)};
+                }
+              }
+            }
+          }
+        }
+      }
+      div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img:nth-child(1) {
+          height: 70vh;
+          width: 40vh;
+        }
+        img:nth-child(2) {
+          height: 65vh;
+          width: 65vw;
+          top: -30px;
+          right: auto;
+          left: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    > section {
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+      div:first-child {
+        margin-top: -60px;
+        h1 {
+          font-size: 1.7rem;
+          span {
+          }
+        }
+        p {
+          margin: 5px 0;
+        }
+
+        div.moreInfo {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 15px 0;
+
+          span {
+            & + span {
+              margin-right: 0;
+            }
+          }
+        }
+        div.moreContactInfo {
+          width: 100%;
+          flex-direction: column;
+
+          > button {
+            width: 70%;
+            height: 40px;
+          }
+          > div {
+            margin: 15px 0;
+            > a {
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                color: ${props => props.theme.colors.primary};
+                transition: all 0.2s;
+                &:hover {
+                  color: ${props => darken(0.1, props.theme.colors.primary)};
+                }
+              }
+            }
+          }
+        }
+      }
+      div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img:nth-child(1) {
+          height: 70vh;
+          width: 40vh;
+        }
+        img:nth-child(2) {
+          height: 65vh;
+          width: 65vw;
+          top: -30px;
+          right: auto;
+          left: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    > section {
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+      div:first-child {
+        margin-top: -60px;
+        h1 {
+          display: flex;
+          flex-direction: column;
+          font-size: 1.4rem;
+          span {
+            width: fit-content;
+          }
+        }
+        p {
+          margin: 5px 0;
+        }
+
+        div.moreInfo {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 15px 0;
+
+          span {
+            & + span {
+              margin-right: 0;
+            }
+          }
+        }
+        div.moreContactInfo {
+          width: 100%;
+          flex-direction: column;
+
+          > button {
+            width: 60%;
+            height: 40px;
+          }
+          > div {
+            margin: 15px 0;
+            > a {
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                color: ${props => props.theme.colors.primary};
+                transition: all 0.2s;
+                &:hover {
+                  color: ${props => darken(0.1, props.theme.colors.primary)};
+                }
+              }
+            }
+          }
+        }
+      }
+      div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img:nth-child(1) {
+          height: 60vh;
+          width: 35vh;
+        }
+        img:nth-child(2) {
+          height: 55vh;
+          width: 65vw;
+          top: -30px;
+          right: auto;
+          left: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    > section {
+      grid-template-columns: repeat(1, 1fr);
+      place-items: center;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column-reverse;
+      div:first-child {
+        margin-top: -60px;
+        h1 {
+          display: flex;
+          flex-direction: column;
+
+          font-size: 1.4rem;
+          span {
+            width: fit-content;
+          }
+        }
+        p {
+          margin: 5px 0;
+        }
+
+        div.moreInfo {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 15px 0;
+
+          span {
+            & + span {
+              margin-right: 0;
+            }
+          }
+        }
+        div.moreContactInfo {
+          width: 100%;
+          flex-direction: column;
+
+          > button {
+            width: 50%;
+            height: 40px;
+          }
+          > div {
+            margin: 15px 0;
+            > a {
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                color: ${props => props.theme.colors.primary};
+                transition: all 0.2s;
+                &:hover {
+                  color: ${props => darken(0.1, props.theme.colors.primary)};
+                }
+              }
+            }
+          }
+        }
+      }
+      div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img:nth-child(1) {
+          height: 60vh;
+          width: 35vh;
+        }
+        img:nth-child(2) {
+          height: 55vh;
+          width: 65vw;
+          top: -30px;
+          right: auto;
+          left: auto;
         }
       }
     }

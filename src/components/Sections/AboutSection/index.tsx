@@ -7,8 +7,9 @@ import {
 import { PageTitle } from '../../PageTitle';
 import profileImg from '../../../assets/images/picture.png';
 import illustrationImg from '../../../assets/images/triangle.png';
-import { Container } from './styles';
 import { HeroSkillSection } from '../HeroSkillSection';
+import { Container } from './styles';
+import { WordTyping } from '../../WordTyping';
 
 export function AboutSection() {
   return (
@@ -17,12 +18,9 @@ export function AboutSection() {
 
       <section>
         <div>
-          <img src={profileImg} alt="Profile picture" />
-          <img src={illustrationImg} alt="Illustrative image of a triangle" />
-        </div>
-        <div>
           <h1>
-            Eu sou Djayson Rodrigues, <span>developer</span>
+            Eu me chamo Djayson Rodrigues,
+            <WordTyping />
           </h1>
           <p>
             Sou um freelancer baseado no Reino Unido e tenho vindo a construir
@@ -48,11 +46,12 @@ export function AboutSection() {
             para a evolução do produto me ajuda a priorizar tarefas, iterar
             rapidamente e entregar mais rapidamente.
           </p>
-          <div>
+
+          <div className="moreInfo">
             <span>Telefone / Whatsapp : (85) 99177-4335</span>
             <span> Parangaba | Fortaleza - ce </span>
           </div>
-          <div>
+          <div className="moreContactInfo">
             <button type="button">
               Download CV <FaDownload />
             </button>
@@ -70,6 +69,10 @@ export function AboutSection() {
               </a>
             </div>
           </div>
+        </div>
+        <div>
+          <img src={profileImg} alt="Profile picture" />
+          <img src={illustrationImg} alt="Illustrative image of a triangle" />
         </div>
       </section>
       <HeroSkillSection />
