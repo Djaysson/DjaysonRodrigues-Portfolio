@@ -1,41 +1,35 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
-  gap: 1rem;
-
-  > h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    position: relative;
-    text-transform: capitalize;
-    &:before {
-      content: '';
-      height: 5px;
-      background: ${props => props.theme.colors.primary};
-      width: 50px;
-      position: absolute;
-      left: -57px;
-      top: 50%;
-      bottom: 50%;
-    }
-    &:after {
-      content: '';
-      height: 5px;
-      background: ${props => props.theme.colors.primary};
-      width: 50px;
-      position: absolute;
-      right: -57px;
-      top: 50%;
-      bottom: 50%;
-    }
+  #canvas-stable-id-for-csr-ssr {
+    margin: 0 auto;
+    width: 50%;
+    filter: contrast(1.7);
   }
 
-  > div {
-    width: 100%;
+  @media (max-width: 1000px) {
+    #canvas-stable-id-for-csr-ssr {
+      width: 80%;
+      margin: 1.9rem auto;
+    }
+  }
+  @media (max-width: 700px) {
+    #canvas-stable-id-for-csr-ssr {
+      width: 85%;
+      margin: 1.6rem auto;
+    }
+  }
+  @media (max-width: 450px) {
+    #canvas-stable-id-for-csr-ssr {
+      width: 100%;
+      margin: 1.3rem auto;
+    }
+  }
+  @media (max-width: 350px) {
+    #canvas-stable-id-for-csr-ssr {
+      width: 100%;
+      margin: 1rem auto;
+    }
   }
 `;

@@ -22,6 +22,7 @@ import {
   siNpm,
   siVercel
 } from 'simple-icons/icons';
+import { PageTitle } from '../PageTitle';
 import { Container } from './styles';
 
 const cloudProps: Omit<ICloud, 'children'> = {
@@ -42,7 +43,7 @@ const cloudProps: Omit<ICloud, 'children'> = {
     reverse: true,
     depth: 1,
     wheelZoom: false,
-    imageScale: 2.5,
+    imageScale: 2,
     activeCursor: 'default',
     tooltip: 'native',
     initial: [0.1, -0.1],
@@ -88,7 +89,11 @@ const icons = [
 export const SkillIconCloud = React.memo(() => {
   return (
     <Container>
-      <h1>Minhas Habilidades</h1>
+      <PageTitle
+        title="Habilidades"
+        description="Stack de Conhecimentos"
+        classN="pageTitle"
+      />
       <Cloud {...cloudProps}>{icons}</Cloud>
     </Container>
   );
