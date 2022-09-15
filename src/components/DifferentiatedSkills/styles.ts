@@ -2,76 +2,93 @@ import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  place-items: center;
-  gap: 1rem;
+  width: 100%;
 
-  > h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-bottom: 3rem;
+  .slick-slider {
+    margin: 2rem auto;
+    width: 70%;
 
-    position: relative;
-    top: 23px;
-    text-transform: capitalize;
-    &:before {
-      content: '';
-      height: 5px;
-      background: ${props => props.theme.colors.primary};
-      width: 50px;
-      position: absolute;
-      left: -57px;
-      top: 50%;
-      bottom: 50%;
+    > .slick-dots li.slick-active button:before {
+      color: ${props => props.theme.colors.primary};
     }
-    &:after {
-      content: '';
-      height: 5px;
-      background: ${props => props.theme.colors.primary};
-      width: 50px;
-      position: absolute;
-      right: -57px;
-      top: 50%;
-      bottom: 50%;
-    }
+  }
+  @media (max-width: 350px) {
+    width: 100%;
   }
 `;
 export const SkillCard = styled.div`
-  width: 100%;
-  height: 200px;
-  background: ${props => props.theme.colors.background};
-  box-shadow: 0 0 0.2rem ${props => props.theme.colors.primary};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background: ${props => darken(0.01, props.theme.colors.background)};
   border-radius: 10px;
-  padding: 20px;
+  padding: 25px;
 
   > h2 {
     font-size: 1.5rem;
     font-weight: 600;
+    margin: 0.5rem 0;
+
+    text-align: center;
   }
   > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+
     align-items: center;
     gap: 1rem;
 
     svg {
-      font-size: 7rem;
+      width: 6rem;
+      height: 6rem;
       color: ${props => props.theme.colors.primary};
     }
     p {
       font-size: 1rem;
       font-weight: 400;
-      width: 80%;
+      width: 100%;
       text-align: left;
       text-indent: 0.3rem;
       color: ${props => darken(0.1, props.theme.colors.textLight)};
+    }
+  }
+  @media (max-width: 450px) {
+    padding: 5px;
+    min-height: 16rem;
+
+    > h2 {
+      font-size: 1.4rem;
+    }
+    > div {
+      flex-direction: column;
+
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
+      p {
+        width: 95%;
+        text-align: center;
+        text-indent: 0.5rem;
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    padding: 5px;
+    min-height: 18rem;
+
+    > h2 {
+      font-size: 1.3rem;
+    }
+    > div {
+      flex-direction: column;
+
+      svg {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+      p {
+        width: 90%;
+        text-align: center;
+        text-indent: 0.5rem;
+      }
     }
   }
 `;
