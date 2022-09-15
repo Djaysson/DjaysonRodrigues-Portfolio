@@ -6,7 +6,7 @@ export const Container = styled.div`
 
   > section {
     width: 100%;
-    margin-top: 1rem;
+    margin: 1rem 0 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
     place-items: center;
@@ -161,7 +161,7 @@ export const Container = styled.div`
     > section {
       grid-template-columns: repeat(1, 1fr);
       place-items: center;
-      margin-top: 2rem;
+      margin: 2rem 0 6rem;
       display: flex;
       flex-direction: column-reverse;
       div:first-child {
@@ -201,21 +201,12 @@ export const Container = styled.div`
               svg {
                 width: 1.5rem;
                 height: 1.5rem;
-                color: ${props => props.theme.colors.primary};
-                transition: all 0.2s;
-                &:hover {
-                  color: ${props => darken(0.1, props.theme.colors.primary)};
-                }
               }
             }
           }
         }
       }
       div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         img:nth-child(1) {
           height: 70vh;
           width: 40vh;
@@ -234,7 +225,7 @@ export const Container = styled.div`
     > section {
       grid-template-columns: repeat(1, 1fr);
       place-items: center;
-      margin-top: 2rem;
+      margin: 2rem 0 8rem;
       display: flex;
       flex-direction: column-reverse;
       div:first-child {
@@ -274,21 +265,12 @@ export const Container = styled.div`
               svg {
                 width: 1.5rem;
                 height: 1.5rem;
-                color: ${props => props.theme.colors.primary};
-                transition: all 0.2s;
-                &:hover {
-                  color: ${props => darken(0.1, props.theme.colors.primary)};
-                }
               }
             }
           }
         }
       }
       div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         img:nth-child(1) {
           height: 70vh;
           width: 40vh;
@@ -307,7 +289,7 @@ export const Container = styled.div`
     > section {
       grid-template-columns: repeat(1, 1fr);
       place-items: center;
-      margin-top: 2rem;
+      margin: 2rem 0 10rem;
       display: flex;
       flex-direction: column-reverse;
       div:first-child {
@@ -350,21 +332,12 @@ export const Container = styled.div`
               svg {
                 width: 1.5rem;
                 height: 1.5rem;
-                color: ${props => props.theme.colors.primary};
-                transition: all 0.2s;
-                &:hover {
-                  color: ${props => darken(0.1, props.theme.colors.primary)};
-                }
               }
             }
           }
         }
       }
       div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         img:nth-child(1) {
           height: 60vh;
           width: 35vh;
@@ -383,7 +356,7 @@ export const Container = styled.div`
     > section {
       grid-template-columns: repeat(1, 1fr);
       place-items: center;
-      margin-top: 2rem;
+      margin: 2rem 0 12rem;
       display: flex;
       flex-direction: column-reverse;
       div:first-child {
@@ -427,24 +400,15 @@ export const Container = styled.div`
               svg {
                 width: 1.5rem;
                 height: 1.5rem;
-                color: ${props => props.theme.colors.primary};
-                transition: all 0.2s;
-                &:hover {
-                  color: ${props => darken(0.1, props.theme.colors.primary)};
-                }
               }
             }
           }
         }
       }
       div:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
         img:nth-child(1) {
           height: 60vh;
-          width: 35vh;
+          width: 34vh;
         }
         img:nth-child(2) {
           height: 55vh;
@@ -452,6 +416,20 @@ export const Container = styled.div`
           top: -30px;
           right: auto;
           left: auto;
+        }
+      }
+    }
+  }
+  @media (max-width: 300px) {
+    > section {
+      div:last-child {
+        img:nth-child(1) {
+          height: 48vh;
+          width: 25vh;
+        }
+        img:nth-child(2) {
+          height: 45vh;
+          width: 75vw;
         }
       }
     }
