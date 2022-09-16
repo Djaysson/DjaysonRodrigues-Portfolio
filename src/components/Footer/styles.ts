@@ -45,6 +45,7 @@ export const Container = styled.footer`
   > p {
     padding: 0.2rem 0;
     color: ${props => darken(0.2, props.theme.colors.textLight)};
+    font-size: 1rem;
   }
 
   > div.container {
@@ -80,6 +81,25 @@ export const Container = styled.footer`
         cursor: pointer;
         &:hover {
           color: ${props => darken(0.1, props.theme.colors.primary)};
+        }
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    div.logoContainer {
+      gap: 0.5rem;
+      width: 100%;
+
+      > img {
+        width: 7rem;
+      }
+    }
+    > div.container {
+      margin: 0.5rem 0;
+      > button {
+        svg {
+          width: 3rem;
+          height: 3rem;
         }
       }
     }
