@@ -8,7 +8,12 @@ export function Form() {
 
       <label htmlFor="name">
         Seu Nome:
-        <Input name="name" type="text" placeholder="Digite aqui" required />
+        <Input
+          name="name"
+          type="text"
+          placeholder="Digite seu nome aqui"
+          required
+        />
       </label>
 
       <label htmlFor="email">
@@ -16,23 +21,33 @@ export function Form() {
         <Input
           name="email"
           type="email"
-          placeholder="Email@exemplo.com.br"
+          placeholder="Digite seu email aqui"
           required
         />
       </label>
       <label htmlFor="phone">
         Telefone:
-        <Input name="phone" type="text" placeholder="(99)9999-9999" required />
+        <Input
+          name="phone"
+          type="text"
+          placeholder="Digite seu telefone aqui"
+          required
+        />
       </label>
       <label htmlFor="reason">
         Assunto:
-        <Input name="Reason" type="text" placeholder="Digite aqui" required />
+        <Input
+          name="Reason"
+          type="text"
+          placeholder="Digite o motivo do contato aqui"
+          required
+        />
       </label>
 
       <label htmlFor="message">Mensagem:</label>
       <TextArea
         name="message"
-        placeholder="Digite aqui sua mensagem"
+        placeholder="Digite sua mensagem aqui"
         required
       />
       <div>

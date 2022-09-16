@@ -8,7 +8,7 @@ export function ContactSection() {
       <PageTitle
         classN="pageTitle"
         title="Fale Comigo"
-        description="Entraremos em contato em breve"
+        description="Em breve entrarei em contato"
       />
 
       <Form />
