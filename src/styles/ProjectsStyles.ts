@@ -16,4 +16,21 @@ export const ProjectsContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
+
+  @media (max-width: 1200px) {
+    > main {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 1000px) {
+    > main {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 550px) {
+    > main {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 `;
