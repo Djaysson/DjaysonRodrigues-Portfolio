@@ -7,13 +7,15 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   gap: 5rem;
-
   > section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
+    @media (max-width: 1000px) {
+      gap: 2rem;
+    }
   }
   > button {
     background: ${props => props.theme.colors.primary};
@@ -30,6 +32,12 @@ export const Container = styled.section`
       color: ${props => props.theme.colors.text};
       font-size: 1.5rem;
       font-weight: 500;
+    }
+    @media (max-width: 500px) {
+      padding: 1rem;
+      a {
+        font-size: 1rem;
+      }
     }
   }
 `;

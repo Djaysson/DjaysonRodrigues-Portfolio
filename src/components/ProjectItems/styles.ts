@@ -92,4 +92,73 @@ export const Container = styled.div<ProjectItemsProps>`
       }
     }
   }
+  @media (max-width: 1450px) {
+    > section {
+      width: 40rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    > section {
+      width: 100%;
+
+      > div.text {
+        left: 1rem;
+        top: 1rem;
+      }
+    }
+    > button {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      margin: 0;
+    }
+    &:nth-child(even) {
+      flex-direction: row;
+
+      > section {
+        width: 100%;
+
+        > div.text {
+          left: 1rem;
+          top: 1rem;
+          text-align: left;
+        }
+      }
+      > button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        margin: 0;
+      }
+      &:hover {
+        > section > div.text {
+          left: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    height: 17rem;
+  }
+
+  @media (max-width: 450px) {
+    > button {
+      height: auto;
+
+      a {
+        font-size: 1.5rem;
+        gap: 0.8rem;
+      }
+    }
+    > section > div.text {
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  }
 `;
