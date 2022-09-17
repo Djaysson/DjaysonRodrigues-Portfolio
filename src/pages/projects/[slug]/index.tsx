@@ -23,7 +23,7 @@ export default function UniqueProject({ project }: ProjectProps) {
         <PageTitle
           classN="pageTitle"
           title="Detalhes do projeto"
-          description="Saiba mais sobre este projeto"
+          description="Sobre este projeto"
         />
 
         <Link href="/projects">

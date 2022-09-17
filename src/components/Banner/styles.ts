@@ -40,4 +40,17 @@ export const Container = styled.div<ContainerProps>`
     opacity: 0.75;
     transition: 0.5s;
   }
+  @media (max-width: 700px) {
+    padding: 2rem 2.5rem;
+    height: 20rem;
+
+    section {
+      h1 {
+        font-size: 1.7rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
 `;

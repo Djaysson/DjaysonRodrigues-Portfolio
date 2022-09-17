@@ -31,10 +31,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 1rem 5rem;
-    > h1 {
-      font-size: 2.5rem;
-      font-weight: 500;
-    }
+
     div:nth-child(1) {
       > div {
         display: flex;
@@ -99,9 +96,115 @@ export const Container = styled.div`
         }
         a {
           color: ${props => props.theme.colors.text};
-          font-size: 1.5rem;
+          font-size: 1.4rem;
           font-weight: 300;
           text-transform: uppercase;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    > main {
+      div:nth-child(2) {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        button {
+          padding: 1rem 2rem;
+          margin-top: 1rem;
+
+          a {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    > main {
+      div:nth-child(2) {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        button {
+          padding: 1rem 2rem;
+          margin-top: 1rem;
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    > div.title {
+      padding: 0.5rem 0;
+    }
+    > main {
+      padding: 1rem 1.2rem;
+
+      div:nth-child(1) {
+        > div {
+          justify-content: center;
+          gap: 0.3rem;
+          img {
+            width: 2rem;
+            height: 2rem;
+          }
+          h2 {
+            font-size: 1.4rem;
+          }
+        }
+        > ul {
+          li {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+            font-weight: 700;
+
+            & + li {
+              margin-top: 1rem;
+            }
+            span {
+              font-size: 1rem;
+              margin-top: 0.2rem;
+            }
+          }
+        }
+      }
+      div:nth-child(2) {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        button {
+          padding: 1rem 2rem;
+          margin-top: 1rem;
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    > main {
+      div:nth-child(2) {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        button {
+          padding: 1rem 2rem;
+          margin-top: 1rem;
+
+          a {
+            font-size: 1rem;
+          }
         }
       }
     }
