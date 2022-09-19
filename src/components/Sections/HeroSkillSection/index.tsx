@@ -4,7 +4,7 @@ import { Container } from './styles';
 
 export function HeroSkillSection() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <SkillIconCloud />
       <DifferentiatedSkills />
     </Container>

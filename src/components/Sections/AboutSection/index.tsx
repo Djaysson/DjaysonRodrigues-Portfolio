@@ -17,7 +17,7 @@ export function AboutSection() {
       <PageTitle classN="pageTitle" title="Quem sou" description="sobre me" />
 
       <section>
-        <div>
+        <div data-aos="fade-up">
           <h1>
             Eu me chamo Djayson Rodrigues,
             <WordTyping />
@@ -70,7 +70,7 @@ export function AboutSection() {
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in">
           <img src={profileImg} alt="Profile picture" />
           <img src={illustrationImg} alt="Illustrative image of a triangle" />
         </div>
