@@ -47,7 +47,7 @@ export default function UniqueProject({ project }: ProjectProps) {
             </h2>
           </div>
 
-          <ul>
+          <ul data-aos="fade-left">
             <li>
               - Função: <span>{project.occupation}</span>
             </li>
@@ -80,12 +80,12 @@ export default function UniqueProject({ project }: ProjectProps) {
         </div>
 
         <div>
-          <button type="button">
+          <button type="button" data-aos="zoom-in">
             <Link href="/#recentProjects">
               <a>Ver projetos recentes </a>
             </Link>
           </button>
-          <button type="button">
+          <button type="button" data-aos="zoom-in">
             <Link href="/#contact">
               <a>Entre em contato</a>
             </Link>

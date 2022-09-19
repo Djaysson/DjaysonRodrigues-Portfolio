@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 export function Banner({ title, type, imgUrl }: BannerProps) {
   return (
-    <Container imgUrl={imgUrl}>
+    <Container data-aos="zoom-in" imgUrl={imgUrl}>
       <div className="overlay" />
       <section>
         <h1>{title}</h1>
