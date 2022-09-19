@@ -23,7 +23,7 @@ export function ProjectsSection({ projects }: ProjectsProps) {
           />
         ))}
       </section>
-      <button type="button">
+      <button type="button" data-aos="zoom-in">
         <Link href="/projects">
           <a>Ver todos os projetos</a>
         </Link>
