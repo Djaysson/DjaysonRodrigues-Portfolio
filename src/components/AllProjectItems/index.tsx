@@ -9,7 +9,7 @@ export function AllProjectItems({
   imgUrl
 }: AllProjectItemsProps) {
   return (
-    <Container imgUrl={imgUrl}>
+    <Container data-aos="fade-left" imgUrl={imgUrl}>
       <Link href={`/projects/${slug}`}>
         <a>
           <div className="overlay" />
