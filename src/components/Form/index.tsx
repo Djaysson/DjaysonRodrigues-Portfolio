@@ -3,8 +3,8 @@ import { Container, Input, TextArea } from './styles';
 
 export function Form() {
   return (
-    <Container>
-      <h1>Preencha o formulário abaixo</h1>
+    <Container data-aos="fade-up">
+      <h1 data-aos="fade-left">Preencha o formulário abaixo</h1>
 
       <label htmlFor="name">
         Seu Nome:
