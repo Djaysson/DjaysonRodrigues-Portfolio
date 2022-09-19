@@ -6,15 +6,15 @@ import { Container, Content, Citation, DownArrow } from './styles';
 export function StartingSection() {
   return (
     <Container>
-      <img src={picture} alt="Photo of a Macbook" />
+      <img data-aos="fade-up" src={picture} alt="Photo of a Macbook" />
 
-      <Content>
+      <Content data-aos="fade-left">
         <h2>Desenvolvendo soluções para</h2>
         <h1>
           Você & sua <span>empresa</span>{' '}
         </h1>
       </Content>
-      <Citation>
+      <Citation data-aos="fade-left">
         <strong>Citação</strong>
         <q>
           Existem duas maneiras de construir um projeto de software: Uma é

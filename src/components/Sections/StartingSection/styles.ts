@@ -48,7 +48,7 @@ export const Container = styled.section`
     margin-top: 6rem;
   }
   @media (max-width: 450px) {
-    margin-top: 8rem;
+    margin-top: 7rem;
   }
 `;
 
@@ -70,7 +70,7 @@ export const Content = styled.div`
       color: ${props => props.theme.colors.text};
       &:after {
         content: '';
-        height: 5px;
+        height: 4px;
         background: ${props => props.theme.colors.primary};
         position: absolute;
         left: 0;
@@ -115,6 +115,12 @@ export const Content = styled.div`
       font-size: 1.8rem;
       white-space: normal;
       letter-spacing: 0.1rem;
+
+      > span {
+        &:after {
+          height: 3px;
+        }
+      }
     }
     > h2 {
       font-size: 1rem;
@@ -126,6 +132,15 @@ export const Content = styled.div`
     top: -170px;
     > h1 {
       font-size: 1.5rem;
+    }
+    > h2 {
+      font-size: 0.8rem;
+    }
+  }
+  @media (max-width: 300px) {
+    top: -150px;
+    > h1 {
+      font-size: 1.4rem;
     }
     > h2 {
       font-size: 0.8rem;
@@ -167,7 +182,7 @@ export const Citation = styled.blockquote`
     bottom: -10px;
   }
   @media (max-width: 700px) {
-    width: 35rem;
+    width: 33rem;
     position: relative;
     bottom: 50px;
   }

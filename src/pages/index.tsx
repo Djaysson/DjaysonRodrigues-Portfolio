@@ -1,5 +1,8 @@
-import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
+import Prismic from '@prismicio/client';
+import { useEffect } from 'react';
+import Aos from 'aos';
+
 import { Header } from '../components/Header';
 import { AboutSection } from '../components/Sections/AboutSection';
 import { StartingSection } from '../components/Sections/StartingSection';
@@ -8,9 +11,15 @@ import { ContactSection } from '../components/Sections/ContactSection';
 import { Footer } from '../components/Footer';
 import { getPrismicClient } from '../services/prismic';
 import { HomeProps } from '../types/types';
+
 import { HomeContainer } from '../styles/HomeStyles';
+import 'aos/dist/aos.css';
 
 export default function Home({ projects }: HomeProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   return (
     <HomeContainer>
       <Header />
