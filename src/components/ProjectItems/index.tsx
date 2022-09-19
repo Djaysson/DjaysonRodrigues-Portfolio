@@ -6,7 +6,7 @@ import { ProjectItemsProps } from '../../types/types';
 
 export function ProjectItems({ title, type, slug, img }: ProjectItemsProps) {
   return (
-    <Container imgUrl={img}>
+    <Container imgUrl={img} data-aos="fade-up">
       <section>
         <div className="overlay" />
         <div className="text">
