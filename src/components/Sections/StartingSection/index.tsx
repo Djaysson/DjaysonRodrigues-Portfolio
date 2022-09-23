@@ -6,7 +6,7 @@ import { Container, Content, Citation, DownArrow } from './styles';
 export function StartingSection() {
   return (
     <Container>
-      <img data-aos="fade-up" src={picture} alt="Photo of a Macbook" />
+      <img data-aos="fade-up" src={picture} alt="Ilustração do MacBook" />
 
       <Content data-aos="fade-left">
         <h2>Desenvolvendo soluções para</h2>
@@ -23,6 +23,7 @@ export function StartingSection() {
         </q>
 
         <a
+          aria-label="Link para descobrir quem é C.A.R. HOARE"
           href="https://pt.wikipedia.org/wiki/Charles_Antony_Richard_Hoare"
           target="_blank"
           rel="noopener noreferrer"
@@ -31,9 +32,9 @@ export function StartingSection() {
         </a>
       </Citation>
 
-      <DownArrow>
+      <DownArrow aria-label="Botão para ir à seção sobre mim">
         <Link href="#about">
-          <a>
+          <a aria-label="Link para ir à seção sobre mim">
             <FiArrowDown />
           </a>
         </Link>

@@ -17,25 +17,35 @@ export function Footer() {
   return (
     <Container>
       <div className="logoContainer">
-        <img src={logoIcon} alt="Djayson Rodrigues personal website logo" />
+        <img
+          src={logoIcon}
+          alt="Logotipo do website pessoal do desenvolvedor Djayson Rodrigues"
+        />
         <div />
       </div>
       <div className="container">
-        <button type="button" onClick={handleScrollTop}>
+        <button
+          aria-label="Botão para o topo do site"
+          type="button"
+          onClick={handleScrollTop}
+        >
           <BsFillArrowUpCircleFill />
         </button>
         <section>
           <FaGithubSquare
+            aria-label="Navegar para o GitHub"
             onClick={() => handleRedirect('https://github.com/Djaysson')}
           />
           <FaLinkedin
+            aria-label="Navegar para o Linkedin"
             onClick={() =>
               handleRedirect('https://www.linkedin.com/in/djaysonrodrigues')
             }
           />
           <FaInstagramSquare
+            aria-label="Navegar para o Instagram"
             onClick={() =>
-              handleRedirect('https://www.instagram.com/djaysonrodrigues')
+              handleRedirect('https://www.instagram.com/djayson.rodrigues')
             }
           />
         </section>
