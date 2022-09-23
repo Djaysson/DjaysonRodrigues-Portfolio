@@ -18,12 +18,19 @@ export function Header() {
   return (
     <Container>
       <MobileNavBar>
-        <button type="button" onClick={handleOpenMenu}>
+        <button
+          type="button"
+          aria-label="Botão de abrir e fechar o menu"
+          onClick={handleOpenMenu}
+        >
           {openMenu !== true ? <MdMenu /> : <MdClose />}
         </button>
         <Link href="/">
-          <a>
-            <img src={logoIcon} alt="Djayson Rodrigues personal website logo" />
+          <a aria-label="link para a página inicial">
+            <img
+              src={logoIcon}
+              alt="Logotipo do website pessoal do desenvolvedor Djayson Rodrigues"
+            />
           </a>
         </Link>
       </MobileNavBar>
@@ -33,27 +40,30 @@ export function Header() {
             title="Home"
             path="/"
             icon={homeIcon}
-            iconDescription="Home section navigation icon"
+            description="Link de navegação da seção inicial"
           />
           <NavLink
             title="Sobre"
             path="/#about"
             icon={userIcon}
-            iconDescription="Section navigation icon about"
+            description="Link de navegação para a seção sobre"
           />
-          <img src={logoIcon} alt="Djayson Rodrigues personal website logo" />
+          <img
+            src={logoIcon}
+            alt="Logotipo do website pessoal do desenvolvedor Djayson Rodrigues"
+          />
           <NavLink
             title="Portfolio"
             path="/projects"
             icon={bagIcon}
-            iconDescription="Project section navigation icon"
+            description="Link de navegação da seção do projetos"
             includes
           />
           <NavLink
             title="Contato"
             path="/#contact"
             icon={phoneIcon}
-            iconDescription="Contact section navigation icon"
+            description="Link de navegação da seção de contato"
           />
         </ul>
       </nav>

@@ -39,6 +39,7 @@ module.exports = {
     'react/self-closing-comp': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
-    '@typescript-eslint/no-shadow': 'off'
+    '@typescript-eslint/no-shadow': 'off',
+    'prefer-template': 'off'
   }
 };

@@ -46,7 +46,7 @@ export type NavProps = {
   title: string;
   path: string;
   icon?: string;
-  iconDescription?: string;
+  description?: string;
   includes?: boolean;
 };
 

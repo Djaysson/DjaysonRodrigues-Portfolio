@@ -8,7 +8,7 @@ export default function NavLink({
   title,
   path,
   icon,
-  iconDescription,
+  description,
   includes = false
 }: NavProps) {
   const router = useRouter();
@@ -25,8 +25,8 @@ export default function NavLink({
   return (
     <NavLinkContainer isActive={isActive}>
       <Link href={path}>
-        <a>
-          <img src={icon} alt={iconDescription} />
+        <a aria-label={description}>
+          <img src={icon} alt={'Ícone do ' + description} />
           <span>{title}</span>
         </a>
       </Link>
