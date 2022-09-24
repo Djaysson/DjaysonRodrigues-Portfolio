@@ -12,6 +12,9 @@ import { Container } from './styles';
 import { WordTyping } from '../../WordTyping';
 
 export function AboutSection() {
+  function handleRedirect(url: string) {
+    window.open(url);
+  }
   return (
     <Container id="about">
       <PageTitle classN="pageTitle" title="Quem sou" description="sobre me" />
@@ -23,28 +26,26 @@ export function AboutSection() {
             <WordTyping />
           </h1>
           <p>
-            Sou um freelancer baseado no Reino Unido e tenho vindo a construir
-            há anos designs e websites UX/UI notáveis, que estão de acordo com
-            as últimas tendências de design. Eu ajudo a converter uma visão e
-            uma ideia em produtos úteis e significativos. Ter um olho aguçado
-            para a evolução do produto me ajuda a priorizar tarefas, iterar
-            rapidamente e entregar mais rapidamente.
+            Programador e desenvolvedor há mais de 3 anos. O início de minha
+            jornada começa em 2018 no curso de análise e desenvolvimento de
+            sistemas na Universidade Estácio de Sá onde obtive vários contatos
+            com diferentes linguagens de programação, foi lá que descobri meus
+            maiores vícios que são: produzir códigos de qualidade, criar
+            websites, aplicações e sistemas. Com o passar do tempo, adquiri
+            vasto conhecimento nas diversas linguagens de programação utilizadas
+            hoje no mercado.
           </p>
           <p>
-            Sou um freelancer baseado no Reino Unido e tenho vindo a construir
-            há anos designs e websites UX/UI notáveis, que estão de acordo com
-            as últimas tendências de design. Eu ajudo a converter uma visão e
-            uma ideia em produtos úteis e significativos. Ter um olho aguçado
-            para a evolução do produto me ajuda a priorizar tarefas, iterar
-            rapidamente e entregar mais rapidamente.
-          </p>
-          <p>
-            Sou um freelancer baseado no Reino Unido e tenho vindo a construir
-            há anos designs e websites UX/UI notáveis, que estão de acordo com
-            as últimas tendências de design. Eu ajudo a converter uma visão e
-            uma ideia em produtos úteis e significativos. Ter um olho aguçado
-            para a evolução do produto me ajuda a priorizar tarefas, iterar
-            rapidamente e entregar mais rapidamente.
+            Sou um engenheiro de software dedicado a criar diferentes projetos
+            cujo interesse é construir sites interativos, acessíveis e
+            responsivos. Um especialista apaixonado por soluções simples para
+            resolver problemas difíceis. Não tenho nenhuma linguagem de
+            programação &#34; favorita &#34;, mas gosto de codificar na stack de
+            JavaScript no momento. Também gosto de pensar fora da caixa de
+            codificação, gosto de priorizar tarefas e aprender coisas novas,
+            estou sempre experimentando as melhores práticas e desenvolvendo
+            projetos reais em busca de ganhar mais conhecimento para contribuir
+            com soluções modernas e criativas para meus clientes.
           </p>
 
           <div className="moreInfo">
@@ -56,17 +57,25 @@ export function AboutSection() {
               Download CV <FaDownload />
             </button>
             <div>
-              <a href="">
-                {' '}
-                <FaGithubSquare />
-              </a>
-              <a href="">
-                <FaLinkedin />
-              </a>
-              <a href="">
-                {' '}
-                <FaInstagramSquare />
-              </a>
+              <FaGithubSquare
+                aria-label="Navegar para o GitHub"
+                tabIndex={-1}
+                onClick={() => handleRedirect('https://github.com/Djaysson')}
+              />
+              <FaLinkedin
+                aria-label="Navegar para o Linkedin"
+                tabIndex={-1}
+                onClick={() =>
+                  handleRedirect('https://www.linkedin.com/in/djaysonrodrigues')
+                }
+              />
+              <FaInstagramSquare
+                aria-label="Navegar para o Instagram"
+                tabIndex={-1}
+                onClick={() =>
+                  handleRedirect('https://www.instagram.com/djayson.rodrigues')
+                }
+              />
             </div>
           </div>
         </div>

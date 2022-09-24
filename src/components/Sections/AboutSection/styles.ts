@@ -107,18 +107,16 @@ export const Container = styled.div`
             top: 50%;
             bottom: 50%;
           }
-          > a {
-            & + a {
+          > svg {
+            & + svg {
               margin-left: 0.5rem;
             }
-            svg {
-              width: 2rem;
-              height: 2rem;
-              color: ${props => props.theme.colors.primary};
-              transition: all 0.2s;
-              &:hover {
-                color: ${props => darken(0.1, props.theme.colors.primary)};
-              }
+            width: 2rem;
+            height: 2rem;
+            color: ${props => props.theme.colors.primary};
+            transition: all 0.2s;
+            &:hover {
+              color: ${props => darken(0.1, props.theme.colors.primary)};
             }
           }
         }
@@ -126,6 +124,7 @@ export const Container = styled.div`
     }
     div:last-child {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
@@ -197,11 +196,9 @@ export const Container = styled.div`
           > div {
             margin-right: 80px;
 
-            > a {
-              svg {
-                width: 1.5rem;
-                height: 1.5rem;
-              }
+            > svg {
+              width: 1.5rem;
+              height: 1.5rem;
             }
           }
         }
@@ -261,11 +258,9 @@ export const Container = styled.div`
           }
           > div {
             margin: 15px 0;
-            > a {
-              svg {
-                width: 1.5rem;
-                height: 1.5rem;
-              }
+            > svg {
+              width: 1.5rem;
+              height: 1.5rem;
             }
           }
         }
@@ -328,11 +323,9 @@ export const Container = styled.div`
           }
           > div {
             margin: 15px 0;
-            > a {
-              svg {
-                width: 1.5rem;
-                height: 1.5rem;
-              }
+            > svg {
+              width: 1.5rem;
+              height: 1.5rem;
             }
           }
         }
@@ -396,11 +389,9 @@ export const Container = styled.div`
           }
           > div {
             margin: 15px 0;
-            > a {
-              svg {
-                width: 1.5rem;
-                height: 1.5rem;
-              }
+            > svg {
+              width: 1.5rem;
+              height: 1.5rem;
             }
           }
         }
