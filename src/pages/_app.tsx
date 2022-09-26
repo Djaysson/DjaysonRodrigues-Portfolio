@@ -1,7 +1,9 @@
+import { Cursor } from 'react-creative-cursor';
 import { ThemeProvider } from 'styled-components';
 import { Toaster } from 'react-hot-toast';
 import NextNProgress from 'nextjs-progressbar';
 import GlobalStyles from '../styles/global';
+import 'react-creative-cursor/dist/styles.css';
 import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
@@ -13,6 +15,11 @@ function MyApp({ Component, pageProps }) {
         stopDelayMs={200}
         height={3}
         showOnShallow
+      />
+      <Cursor
+        isGelly={true}
+        cursorSize={24}
+        cursorBackgrounColor={theme.colors.cursorColor}
       />
       <Toaster position="bottom-right" />
       <Component {...pageProps} />

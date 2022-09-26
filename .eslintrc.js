@@ -40,6 +40,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     '@typescript-eslint/no-shadow': 'off',
-    'prefer-template': 'off'
+    'prefer-template': 'off',
+    'react/jsx-boolean-value': 'off'
   }
 };
