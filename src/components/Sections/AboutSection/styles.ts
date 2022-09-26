@@ -70,6 +70,7 @@ export const Container = styled.div`
           height: 40px;
           font-size: 1.1rem;
           border: none;
+          cursor: pointer;
           border-radius: 5px;
           color: ${props => props.theme.colors.text};
           background: ${props => props.theme.colors.primary};
@@ -108,6 +109,8 @@ export const Container = styled.div`
             bottom: 50%;
           }
           > svg {
+            cursor: pointer;
+
             & + svg {
               margin-left: 0.5rem;
             }

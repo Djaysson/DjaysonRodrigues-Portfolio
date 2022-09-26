@@ -53,7 +53,14 @@ export function AboutSection() {
             <span> Parangaba | Fortaleza - ce </span>
           </div>
           <div className="moreContactInfo">
-            <button type="button">
+            <button
+              type="button"
+              onClick={() =>
+                handleRedirect(
+                  'https://drive.google.com/file/d/1ZwmVCONo5KWvEQrjpK6dSaJb6aazEwNd/view'
+                )
+              }
+            >
               Download CV <FaDownload />
             </button>
             <div>
