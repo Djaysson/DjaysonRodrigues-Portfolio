@@ -51,11 +51,10 @@ export const Container = styled.div`
   @media (max-width: 700px) {
     height: 5rem;
     nav {
-      width: 50vw;
-      height: 70vh;
+      width: 65vw;
+      max-height: 40rem;
       margin-top: 5rem;
       position: absolute;
-      border-radius: 0 0 30% 0;
       border-right: 1px solid ${props => props.theme.colors.primary};
       border-bottom: 1px solid ${props => props.theme.colors.primary};
       transform: translateX(-999px);
@@ -74,7 +73,7 @@ export const Container = styled.div`
         flex-direction: column;
         justify-content: flex-start;
 
-        margin-top: 1rem;
+        margin: 1rem 0;
         > img {
           display: none;
         }
@@ -128,6 +127,17 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
       span:after {
         transform: scaleX(1);
         opacity: 1;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    a {
+      flex-direction: row;
+      gap: 0.3rem;
+      img {
+        width: 1.2rem;
+        height: 1.2rem;
+        padding-bottom: 0.12rem;
       }
     }
   }
