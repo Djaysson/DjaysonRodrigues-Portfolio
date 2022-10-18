@@ -37,7 +37,7 @@ export default function Home({ projects }: HomeProps) {
           property="og:description"
           content="Portfólio do djayson rodrigues,programador e desenvolvedor Front-end djayson rodrigues, este é meu site pessoal. Você pode dar uma olhada em meu portfólio, baixar meu CV e ver como você pode entrar em contato comigo!"
         />
-        <meta property="og:url" content="https://djaysonrodrigues.vercel.app" />
+        <meta property="og:url" content="https://www.djaysonrodrigues.tk" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="portfólio djayson rodrigues" />
@@ -48,7 +48,7 @@ export default function Home({ projects }: HomeProps) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        <meta name="twitter:url" content="djaysonrodrigues.vercel.app" />
+        <meta name="twitter:url" content="https://www.djaysonrodrigues.tk" />
         <meta
           name="twitter:title"
           content="Home | portfólio djayson rodrigues"

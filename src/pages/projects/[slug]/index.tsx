@@ -25,7 +25,7 @@ export default function UniqueProject({ project }: ProjectProps) {
         <meta name="description" content={project.context} />
         <meta property="og:title" content={project.title} />
         <meta property="og:description" content={project.context} />
-        <meta property="og:url" content="https://djaysonrodrigues.vercel.app" />
+        <meta property="og:url" content="https://www.djaysonrodrigues.tk" />
         <meta property="og:locale" content="pt_BR" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="portfólio djayson rodrigues" />
@@ -36,7 +36,7 @@ export default function UniqueProject({ project }: ProjectProps) {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
 
-        <meta name="twitter:url" content="djaysonrodrigues.vercel.app" />
+        <meta name="twitter:url" content="https://www.djaysonrodrigues.tk" />
         <meta name="twitter:title" content={project.title} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="portfólio djayson rodrigues" />
