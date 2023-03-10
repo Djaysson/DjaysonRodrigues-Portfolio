@@ -57,7 +57,7 @@ export function AboutSection() {
               type="button"
               onClick={() =>
                 handleRedirect(
-                  'https://drive.google.com/file/d/1ZwmVCONo5KWvEQrjpK6dSaJb6aazEwNd/view'
+                  'https://drive.google.com/file/d/1G2ayxPRKS1YNc5IN8DXvVRu84IIwTWdV/view'
                 )
               }
             >
